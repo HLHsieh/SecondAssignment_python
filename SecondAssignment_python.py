@@ -5,8 +5,10 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
+import sys
+
 ## load data
-df = pd.read_csv("regrex1.csv")
+df = pd.read_csv(sys.argv[1])
 
 ## plot scatter
 plt.scatter(x=df.x, y=df.y)
@@ -28,5 +30,4 @@ plt.scatter(X, Y)
 plt.plot(X, Y_pred, color='red')
 plt.xlabel('x')
 plt.ylabel('y')
-plt.show()
 plt.savefig("py_lm.png")
